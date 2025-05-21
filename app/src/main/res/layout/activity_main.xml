@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/arrow_left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/support_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_support_outline"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical"
+                android:layout_margin="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_sms"
+                    app:tint="#A5A5A5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="support"
+                    android:textColor="#A5A5A5"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            android:padding="16dp">
+
+            <!-- Back Arrow -->
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Profile Text -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+                app:layout_constraintStart_toEndOf="@id/back_arrow"
+                app:layout_constraintTop_toTopOf="@id/back_arrow" />
+
+            <!-- Support Button -->
+            <LinearLayout
+                android:id="@+id/support_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_support_outline"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back_arrow">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_sms"
+                    app:tint="#A5A5A5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="support"
+                    android:textColor="#A5A5A5"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+           android:background="#181818"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+              android:layout_margin="12dp"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <!-- Top profile section -->
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="24dp">
+
+                   <com.google.android.material.imageview.ShapeableImageView
+                       android:id="@+id/profile_image"
+                       android:layout_width="64dp"
+                       android:layout_height="64dp"
+                       android:layout_alignParentStart="true"
+                       android:layout_centerVertical="true"
+                       android:src="@drawable/pic"
+                       android:scaleType="centerCrop"
+                       app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:layout_toEndOf="@id/profile_image"
+                       android:layout_marginStart="16dp"
+                       android:layout_centerVertical="true">
+
+                       <TextView
+                           android:id="@+id/username"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Andaz Kumar"
+                           android:textColor="#B1B1B1"
+                           android:textSize="18sp"
+                           android:textStyle="bold" />
+
+                       <TextView
+                           android:id="@+id/member_since"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="member since Dec, 2020"
+                           android:textColor="#8A8A8A"
+                           android:textSize="14sp" />
+                   </LinearLayout>
+
+                   <ImageView
+                       android:background="@drawable/circle_background_with_outlline"
+                       android:id="@+id/edit_button"
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:padding="12dp"
+                       android:layout_alignParentEnd="true"
+                       android:layout_centerVertical="true"
+                       android:src="@drawable/edit_24dp" />
+               </RelativeLayout>
+
+               <!-- CRED Garage Card -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="16dp"
+                   android:background="@drawable/card_background"
+                   android:elevation="4dp"
+                   android:layout_marginBottom="24dp">
+
+                   <ImageView
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:src="@drawable/ic_car"
+                       android:layout_gravity="center_vertical" />
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_marginStart="12dp">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="get to know your vehicles, inside out"
+                           android:textColor="#B3B3B3"
+                           android:textSize="14sp" />
+
+                       <LinearLayout
+                           android:orientation="horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="CRED garage"
+                               android:textColor="#FFFFFF"
+                               android:textSize="16sp"
+                               android:textStyle="bold" />
+
+                           <ImageView
+                               android:layout_marginLeft="8dp"
+                               android:layout_width="32dp"
+                               android:layout_marginTop="2dp"
+                               android:layout_height="match_parent"
+                               android:src="@drawable/trending_flat"
+                               android:layout_gravity="center" />
+
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+
+               <!-- Profile Items List -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <!-- Credit Score -->
+                   <include layout="@layout/item_profile_row"
+                       android:id="@+id/credit_score_row" />
+
+                   <!-- Lifetime Cashback -->
+                   <include layout="@layout/item_profile_row"
+                       android:id="@+id/lifetime_cashback_row" />
+
+                   <!-- Bank Balance -->
+                   <include layout="@layout/item_profile_row"
+                       android:id="@+id/bank_balance_row" />
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+        <!-- Rewards and Benefits -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOUR REWARDS &amp; BENEFITS"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
+
+        <!-- Cashback Balance Row -->
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_weight="1"
+               android:id="@+id/cashback_balance_row"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="16dp"
+               android:clickable="true"
+               android:focusable="true">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="cashback balance"
+                   android:textColor="#FFFFFF"
+                   android:textSize="16sp" />
+
+               <TextView
+                   android:id="@+id/cashback_value"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="₹0"
+                   android:textColor="#7C7C7C"
+                   android:textSize="16sp" />
+           </LinearLayout>
+
+
+           <ImageView
+               android:layout_marginBottom="6dp"
+               android:layout_gravity="center"
+               android:id="@+id/icon"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginEnd="4dp"
+               android:src="@drawable/chevron_right" />
+
+
+       </LinearLayout>
+
+        <View
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#292929"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <!-- Coins Row -->
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <LinearLayout
+               android:layout_weight="1"
+               android:id="@+id/coins_row"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="16dp"
+               android:clickable="true"
+               android:focusable="true">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:text="coins"
+                   android:textColor="#FFFFFF"
+                   android:textSize="16sp" />
+
+               <TextView
+                   android:id="@+id/coins_value"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="26,46,583"
+                   android:textColor="#7C7C7C"
+                   android:textSize="16sp" />
+           </LinearLayout>
+
+           <ImageView
+               android:layout_marginBottom="6dp"
+               android:layout_gravity="center"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginEnd="4dp"
+               android:src="@drawable/chevron_right" />
+
+       </LinearLayout>
+
+
+        <View
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#292929"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <!-- Refer & Earn Row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:id="@+id/refer_row"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="win upto Rs 1000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="refer and earn"
+                    android:textColor="#A5A5A5"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/chevron_right" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
